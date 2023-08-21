@@ -5,7 +5,7 @@ const todoList = document.getElementById('todoList');
 
 let todos = [];
 
-let editingIndex = -1;
+let editingIndex = 1;
 
 function yourTodos() {
   todoList.innerHTML = '';
@@ -26,7 +26,7 @@ function yourTodos() {
         
         todoList.appendChild(listItem);
 
-        if (editingIndex !== -1 && editingIndex !== index) {
+        if (editingIndex !== 1 && editingIndex !== index) {
           editButton.disabled = true;
         }
       });
@@ -37,11 +37,11 @@ function yourTodos() {
     function addTodo() {
       const newTodo = newTodoInput.value.trim();
       if (newTodo !== '') {
-        if (editingIndex === -1) {
+        if (editingIndex === 1) {
           todos.push(newTodo);
         } else {
           todos[editingIndex] = newTodo;
-          editingIndex = -1;
+          editingIndex = 1;
         }
         newTodoInput.value = '';
         yourTodos();
@@ -59,8 +59,8 @@ function yourTodos() {
     }
 
     function removeTodo(index) {
-      todos.splice(index, 1);
-      editingIndex = -1;
+      todos.splice(index,1);
+      editingIndex = 1;
       yourTodos();
     }
 
@@ -68,7 +68,7 @@ function yourTodos() {
       const confirmDelete = confirm('Are you sure you want to delete all todos?');
       if (confirmDelete) {
         todos = [];
-        editingIndex = -1;
+        editingIndex = 1;
         yourTodos();
       }
     }

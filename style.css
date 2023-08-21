@@ -41,6 +41,12 @@ button:hover{
     justify-content: center;
 }
 
+ul{
+    border-radius: 7px;
+    border-color: rgb(0, 129, 250);
+    border-style:groove;
+}
+
 #text{
     color: blanchedalmond;
     background-color: black!important;
