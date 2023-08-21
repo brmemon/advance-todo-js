@@ -3,12 +3,58 @@
     margin: 0;
     box-sizing: border-box;
     line-height: 1.5;
-
+    
 } 
-#grad1 {
-    max-height: 100%;
-    height:657px;
-    background-image: linear-gradient(rgb(0, 140, 255), rgb(0, 0, 255), rgb(0, 0, 0));
+body{
+    background-color: rgb(69, 3, 250);
+}
+
+#newTodo{
+    border-style:double;
+    width: 14%;
+    font-size: 12px;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+}
+
+button{
+    background-color: black;
+    color: rgb(0, 123, 255);
+    font-size: 15px;
+    font-style: italic;
+    font-family:sans-serif;
+    cursor: pointer;
+    padding: 0px 5px;
+    margin: 2px 2px;
+}
+
+button:hover{
+    background-color: rgb(0, 187, 255);
+    color: black;
+}
+
+.ul_div{
+    align-items: center;
+    /* width: 10%; */
+    display: flex;
+    justify-content: center;
+}
+
+#text{
+    color: blanchedalmond;
+    background-color: black!important;
+}
+
+li{
+    padding: 2px 5px;
+    display: flex;
+    justify-content:space-between;
+    /* width: fit-content; */
+    border-style:groove;
+    margin: 10px;
+    font-size: 15px;
+    color: aqua;
 }
 
 .first_hed{

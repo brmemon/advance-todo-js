@@ -7,7 +7,7 @@ let todos = [];
 
 let editingIndex = -1;
 
-function renderTodos() {
+function yourTodos() {
   todoList.innerHTML = '';
   todos.forEach((todo, index) => {0
     const listItem = document.createElement('li');
@@ -44,7 +44,7 @@ function renderTodos() {
           editingIndex = -1;
         }
         newTodoInput.value = '';
-        renderTodos();
+        yourTodos();
       }
     }
 
@@ -61,7 +61,7 @@ function renderTodos() {
     function removeTodo(index) {
       todos.splice(index, 1);
       editingIndex = -1;
-      renderTodos();
+      yourTodos();
     }
 
     function removeAllTodos() {
@@ -69,7 +69,7 @@ function renderTodos() {
       if (confirmDelete) {
         todos = [];
         editingIndex = -1;
-        renderTodos();
+        yourTodos();
       }
     }
 
@@ -82,4 +82,4 @@ document.addEventListener('keydown', function (event) {
   }
 });
 
-renderTodos();
+yourTodos();
